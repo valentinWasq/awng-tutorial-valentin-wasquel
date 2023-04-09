@@ -14,7 +14,7 @@
     <div class="container">
         <h1>sondage : "{{question.question_text}}"</h1>
     </div>
-    <form action="{% url 'polls:vote' question.id %}" method="post">
+    <form action="{% url 'polls:vote' question.id %}" method="post" class="container">
         {% csrf_token %}
         <fieldset>
             {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
